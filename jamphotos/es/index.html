@@ -22,9 +22,9 @@
         <a href="/jamphotos/es/privacy/index.html">Privacidad</a>
         <a href="/jamphotos/es/support/index.html">Soporte</a>
         <span class="language-switcher" aria-label="Idioma">
-          <a href="/jamphotos/index.html">EN</a>
-          <a class="active" href="/jamphotos/es/index.html">ES</a>
-          <a href="/jamphotos/ru/index.html">RU</a>
+          <a data-language="en" href="/jamphotos/index.html?lang=en">EN</a>
+          <a class="active" data-language="es" href="/jamphotos/es/index.html?lang=es">ES</a>
+          <a data-language="ru" href="/jamphotos/ru/index.html?lang=ru">RU</a>
         </span>
       </nav>
     </header>
@@ -38,6 +38,14 @@
           <a class="button primary" href="/jamphotos/es/privacy/index.html">Politica de Privacidad</a>
           <a class="button" href="/jamphotos/es/support/index.html">Soporte</a>
         </div>
+        <label class="language-panel">
+          <span>Idioma</span>
+          <select data-language-switch>
+            <option value="en">English</option>
+            <option value="es" selected>Español</option>
+            <option value="ru">Русский</option>
+          </select>
+        </label>
         <div class="features">
           <article class="feature"><strong>Flujo por lotes</strong><p>Aplica un mismo look a toda la serie o ajusta una sola imagen.</p></article>
           <article class="feature"><strong>Recorte manual</strong><p>Define pixeles exactos y ajusta el encuadre con gestos.</p></article>
@@ -54,5 +62,6 @@
       <span>© 2026 Kamnev Vladimir Sergeevich</span>
       <span><a href="mailto:kamnev.apps@gmail.com">kamnev.apps@gmail.com</a></span>
     </footer>
+    <script src="/jamphotos/language.js"></script>
   </body>
 </html>
