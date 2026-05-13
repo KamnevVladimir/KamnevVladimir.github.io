@@ -11,6 +11,7 @@
   function pageKind(pathname) {
     if (pathname.indexOf("/privacy/") !== -1) return "privacy";
     if (pathname.indexOf("/support/") !== -1) return "support";
+    if (pathname.indexOf("/terms/") !== -1) return "terms";
     return "home";
   }
 
@@ -18,6 +19,7 @@
     var prefix = language === "en" ? "/jamphotos" : "/jamphotos/" + language;
     if (kind === "privacy") return prefix + "/privacy/index.html";
     if (kind === "support") return prefix + "/support/index.html";
+    if (kind === "terms") return prefix + "/terms/index.html";
     return prefix + "/index.html";
   }
 
