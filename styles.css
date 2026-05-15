@@ -279,9 +279,30 @@ h1 {
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.showcase .screen:nth-child(1) { left: 2%; top: 12%; transform: rotate(-8deg); }
-.showcase .screen:nth-child(2) { right: 0; top: 0; transform: rotate(6deg); }
-.showcase .screen:nth-child(3) { left: 25%; bottom: 0; transform: rotate(1deg); }
+.showcase .screen:nth-child(1) {
+  left: 14%;
+  top: 2%;
+  width: min(66%, 342px);
+  z-index: 4;
+  transform: rotate(-4deg);
+  box-shadow: 0 38px 120px rgba(16, 23, 20, 0.28);
+}
+
+.showcase .screen:nth-child(2) {
+  right: -1%;
+  top: 13%;
+  z-index: 1;
+  transform: rotate(7deg);
+  opacity: 0.86;
+}
+
+.showcase .screen:nth-child(3) {
+  left: 0;
+  bottom: 5%;
+  z-index: 2;
+  transform: rotate(-8deg);
+  opacity: 0.9;
+}
 
 .showcase .screen:hover {
   box-shadow: 0 32px 110px rgba(16, 23, 20, 0.22);
@@ -289,13 +310,13 @@ h1 {
 
 .floating-icon {
   position: absolute;
-  left: 4%;
-  bottom: 8%;
+  left: 7%;
+  bottom: 10%;
   width: 112px;
   height: 112px;
   border-radius: 25px;
   box-shadow: 0 20px 54px rgba(16, 23, 20, 0.22);
-  z-index: 2;
+  z-index: 5;
   outline: 8px solid rgba(255, 255, 255, 0.62);
 }
 
