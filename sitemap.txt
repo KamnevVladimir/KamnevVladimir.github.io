@@ -11,4 +11,12 @@ https://kamnevvladimir.github.io/expiry-keeper/
 https://kamnevvladimir.github.io/task-memo/
 https://kamnevvladimir.github.io/sendshrink/
 https://kamnevvladimir.github.io/exif-remover/
+https://kamnevvladimir.github.io/exif-remover/ru/
+https://kamnevvladimir.github.io/exif-remover/ru/privacy/
+https://kamnevvladimir.github.io/exif-remover/ru/terms/
+https://kamnevvladimir.github.io/exif-remover/ru/support/
+https://kamnevvladimir.github.io/exif-remover/es/
+https://kamnevvladimir.github.io/exif-remover/es/privacy/
+https://kamnevvladimir.github.io/exif-remover/es/terms/
+https://kamnevvladimir.github.io/exif-remover/es/support/
 https://kamnevvladimir.github.io/support/
