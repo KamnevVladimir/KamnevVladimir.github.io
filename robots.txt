@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://kamnevvladimir.github.io/sitemap.xml
-Sitemap: https://kamnevvladimir.github.io/sitemap.txt

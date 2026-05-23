@@ -80,10 +80,6 @@ def render_xml(entries: list[SitemapEntry]) -> str:
     return "\n".join(lines) + "\n"
 
 
-def render_txt(entries: list[SitemapEntry]) -> str:
-    return "".join(f"{entry.url}\n" for entry in entries)
-
-
 def metadata_errors(root: Path, entries: list[SitemapEntry]) -> list[str]:
     errors: list[str] = []
     for entry in entries:
@@ -111,24 +107,20 @@ def write_if_changed(path: Path, content: str) -> bool:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Generate GitHub Pages sitemap.xml and sitemap.txt.")
+    parser = argparse.ArgumentParser(description="Generate the GitHub Pages sitemap.xml.")
     parser.add_argument("--check", action="store_true", help="Fail when generated sitemaps differ from files on disk.")
     args = parser.parse_args()
 
     root = Path(__file__).resolve().parents[1]
     entries = discover_entries(root)
     xml = render_xml(entries)
-    txt = render_txt(entries)
 
     sitemap_xml = root / "sitemap.xml"
-    sitemap_txt = root / "sitemap.txt"
 
     if args.check:
         stale = []
         if not sitemap_xml.exists() or sitemap_xml.read_text(encoding="utf-8") != xml:
             stale.append(sitemap_xml.name)
-        if not sitemap_txt.exists() or sitemap_txt.read_text(encoding="utf-8") != txt:
-            stale.append(sitemap_txt.name)
         meta_errors = metadata_errors(root, entries)
         if stale:
             print(f"Stale sitemap files: {', '.join(stale)}", file=sys.stderr)
@@ -142,14 +134,7 @@ def main() -> int:
         print(f"OK: {len(entries)} sitemap URLs")
         return 0
 
-    changed = [
-        name
-        for name, did_change in (
-            (sitemap_xml.name, write_if_changed(sitemap_xml, xml)),
-            (sitemap_txt.name, write_if_changed(sitemap_txt, txt)),
-        )
-        if did_change
-    ]
+    changed = [sitemap_xml.name] if write_if_changed(sitemap_xml, xml) else []
     if changed:
         print(f"Updated {', '.join(changed)} with {len(entries)} URLs")
     else:
