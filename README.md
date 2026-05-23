@@ -2,6 +2,17 @@
 
 Static GitHub Pages site for App Store support, privacy, and marketing pages.
 
+## Sitemap
+
+Regenerate the submitted sitemaps after adding, removing, or moving public pages:
+
+```sh
+python3 scripts/generate_sitemaps.py
+python3 scripts/generate_sitemaps.py --check
+```
+
+The generator scans public `index.html` pages and skips legacy aliases whose canonical URL points elsewhere.
+
 ## Expiry Keeper: Documents
 
 - Portfolio: `https://kamnevvladimir.github.io/`
