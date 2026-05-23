@@ -11,7 +11,7 @@ python3 scripts/generate_sitemaps.py
 python3 scripts/generate_sitemaps.py --check
 ```
 
-The generator scans public `index.html` pages and skips legacy aliases whose canonical URL points elsewhere. Submit only `https://kamnevvladimir.github.io/sitemap.xml` in Google Search Console.
+The generator scans public `index.html` pages and skips legacy aliases whose canonical URL points elsewhere. Submit only `https://kamnevvladimir.github.io/sitemap-pages.xml` in Google Search Console.
 
 ## Expiry Keeper: Documents
 

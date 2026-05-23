@@ -10,6 +10,7 @@ from xml.sax.saxutils import escape
 
 BASE_URL = "https://kamnevvladimir.github.io"
 EXCLUDED_PREFIXES = ("batchframe/",)
+SITEMAP_FILENAME = "sitemap-pages.xml"
 
 
 @dataclass(frozen=True)
@@ -115,7 +116,7 @@ def main() -> int:
     entries = discover_entries(root)
     xml = render_xml(entries)
 
-    sitemap_xml = root / "sitemap.xml"
+    sitemap_xml = root / SITEMAP_FILENAME
 
     if args.check:
         stale = []
