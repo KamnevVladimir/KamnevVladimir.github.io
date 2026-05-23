@@ -10,7 +10,7 @@ from xml.sax.saxutils import escape
 
 BASE_URL = "https://kamnevvladimir.github.io"
 EXCLUDED_PREFIXES = ("batchframe/",)
-SITEMAP_FILENAME = "sitemap-pages.xml"
+SITEMAP_FILENAMES = ("google-sitemap.xml", "sitemap-pages.xml", "sitemap.xml")
 
 
 @dataclass(frozen=True)
@@ -116,12 +116,13 @@ def main() -> int:
     entries = discover_entries(root)
     xml = render_xml(entries)
 
-    sitemap_xml = root / SITEMAP_FILENAME
+    sitemap_paths = [root / filename for filename in SITEMAP_FILENAMES]
 
     if args.check:
         stale = []
-        if not sitemap_xml.exists() or sitemap_xml.read_text(encoding="utf-8") != xml:
-            stale.append(sitemap_xml.name)
+        for sitemap_path in sitemap_paths:
+            if not sitemap_path.exists() or sitemap_path.read_text(encoding="utf-8") != xml:
+                stale.append(sitemap_path.name)
         meta_errors = metadata_errors(root, entries)
         if stale:
             print(f"Stale sitemap files: {', '.join(stale)}", file=sys.stderr)
@@ -135,7 +136,7 @@ def main() -> int:
         print(f"OK: {len(entries)} sitemap URLs")
         return 0
 
-    changed = [sitemap_xml.name] if write_if_changed(sitemap_xml, xml) else []
+    changed = [sitemap_path.name for sitemap_path in sitemap_paths if write_if_changed(sitemap_path, xml)]
     if changed:
         print(f"Updated {', '.join(changed)} with {len(entries)} URLs")
     else:
