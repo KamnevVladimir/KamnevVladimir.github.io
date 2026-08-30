@@ -2,6 +2,14 @@
 
 Static GitHub Pages site for App Store support, privacy, and marketing pages.
 
+## Developer tools
+
+- Public MCP manifests and implementation notes: [`mcp/`](mcp/)
+- Human-readable MCP and embed documentation: `https://kamnevvladimir.github.io/developer-tools/`
+- Canonical browser tools: `https://kamnevapps.com/tools/`
+
+The MCP entries describe four public Streamable HTTP endpoints. Their interactive media and transcript workspaces run in the client; the manifests state the privacy boundary and limitations rather than promising server-side file processing.
+
 ## Sitemap
 
 Regenerate the submitted XML sitemap after adding, removing, or moving public pages:

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.KamnevVladimir/sendshrink",
+  "title": "SendShrink",
+  "description": "Compress one JPEG, PNG, or WebP toward an upload limit; the image stays in the client workspace.",
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://kamnevapps.com/mcp/sendshrink"
+    }
+  ]
+}

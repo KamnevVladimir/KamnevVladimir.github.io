@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kamnev Apps Developer Tools | MCP and Local Embeds</title>
+    <meta name="description" content="Public Kamnev Apps MCP endpoints and local-first embed snippets for image compression, metadata removal, image conversion, and transcript preparation.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://kamnevvladimir.github.io/developer-tools/">
+    <meta property="og:title" content="Kamnev Apps Developer Tools">
+    <meta property="og:description" content="Four public MCP endpoints and two useful local-first media embeds, with clear capabilities and privacy boundaries.">
+    <meta property="og:image" content="https://kamnevvladimir.github.io/assets/sendshrink-icon.png">
+    <meta property="og:url" content="https://kamnevvladimir.github.io/developer-tools/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/assets/jamphotos-icon.png">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/"><img src="/assets/jamphotos-icon.png" alt="Kamnev Apps icon"><span>Kamnev Apps</span></a>
+      <nav class="nav" aria-label="Main navigation"><a href="/">Apps</a><a href="https://kamnevapps.com/tools/?utm_source=github_pages&amp;utm_medium=referral&amp;utm_campaign=developer_tools">Browser tools</a><a href="/support/">Support</a></nav>
+    </header>
+    <main>
+      <section class="hero compact">
+        <div>
+          <p class="eyebrow">Public interfaces / explicit boundaries</p>
+          <h1>MCP endpoints and local-first embeds.</h1>
+          <p class="lead">These interfaces expose focused Kamnev Apps workflows without turning private files into a server-side data pipeline. Each entry says what it does, what remains in the client, and what it cannot do.</p>
+          <div class="actions"><a class="button store" href="https://kamnevapps.com/tools/?utm_source=github_pages&amp;utm_medium=referral&amp;utm_campaign=developer_tools">Try the browser tools</a><a class="button" href="https://github.com/KamnevVladimir/KamnevVladimir.github.io/tree/main/mcp">Inspect the manifests</a></div>
+        </div>
+      </section>
+
+      <section class="wrap section" aria-labelledby="mcp-title">
+        <h2 id="mcp-title">Public Streamable HTTP endpoints</h2>
+        <p class="section-lead">The remote servers return structured capabilities and interactive client workspaces. Media bytes or pasted transcript content remain in those client workspaces; the endpoints do not receive those private inputs.</p>
+        <div class="features">
+          <article class="feature"><strong>Metadata Remover</strong><p>Inspect photo metadata and create a cleaned copy in the interactive client.</p><a href="https://github.com/KamnevVladimir/KamnevVladimir.github.io/tree/main/mcp/metadata-remover">Manifest and limits</a></article>
+          <article class="feature"><strong>SendShrink</strong><p>Compress one JPEG, PNG, or WebP toward a measurable upload limit in the interactive client.</p><a href="https://github.com/KamnevVladimir/KamnevVladimir.github.io/tree/main/mcp/sendshrink">Manifest and limits</a></article>
+          <article class="feature"><strong>Image Converter</strong><p>Convert supported image formats locally without claiming that the remote endpoint processes the file.</p><a href="https://github.com/KamnevVladimir/KamnevVladimir.github.io/tree/main/mcp/image-converter">Manifest and limits</a></article>
+          <article class="feature"><strong>YouTube Transcript</strong><p>Clean and package caption text that the user already copied; it does not fetch video, audio, or captions from a URL.</p><a href="https://github.com/KamnevVladimir/KamnevVladimir.github.io/tree/main/mcp/youtube-transcript">Manifest and limits</a></article>
+        </div>
+      </section>
+
+      <section class="wrap section" id="embeds" aria-labelledby="embed-title">
+        <h2 id="embed-title">Two useful embeds</h2>
+        <p class="section-lead">Use these only where the visitor already needs the function, such as an upload-limit guide or a photo-privacy checklist. Attribution is visible; hidden or forced SEO links are not part of the widget.</p>
+        <div class="features">
+          <article class="feature"><strong>SendShrink compressor</strong><p><code>&lt;script src="https://kamnevapps.com/embed/sendshrink.js" data-target="2mb" async&gt;&lt;/script&gt;</code></p><a href="https://kamnevapps.com/tools/compress-photo-to-size/?utm_source=github_pages&amp;utm_medium=referral&amp;utm_campaign=developer_tools">Test the compressor</a></article>
+          <article class="feature"><strong>Metadata Remover</strong><p><code>&lt;script src="https://kamnevapps.com/embed/metadata-remover.js" async&gt;&lt;/script&gt;</code></p><a href="https://kamnevapps.com/tools/remove-photo-metadata/?utm_source=github_pages&amp;utm_medium=referral&amp;utm_campaign=developer_tools">Test the cleaner</a></article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><span>© 2026 Vladimir Kamnev</span><span><a href="mailto:kamnev.apps@gmail.com">kamnev.apps@gmail.com</a></span></footer>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.KamnevVladimir/youtube-transcript",
+  "title": "YouTube Transcript Prep",
+  "description": "Clean caption text copied by the user; it never fetches video, audio, captions, or private content.",
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://kamnevapps.com/mcp/youtube-transcript"
+    }
+  ]
+}

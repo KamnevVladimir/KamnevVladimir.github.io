@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.KamnevVladimir/image-converter",
+  "title": "Private Image Converter",
+  "description": "Convert supported images between web formats locally; selected files stay in the client workspace.",
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://kamnevapps.com/mcp/image-converter"
+    }
+  ]
+}

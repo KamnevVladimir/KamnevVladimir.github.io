@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.KamnevVladimir/metadata-remover",
+  "title": "Metadata Remover",
+  "description": "Inspect and clean photo metadata in a private client workspace; selected files stay in the client.",
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://kamnevapps.com/mcp/metadata-remover"
+    }
+  ]
+}
